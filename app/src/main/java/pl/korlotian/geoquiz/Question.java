@@ -1,9 +1,5 @@
 package pl.korlotian.geoquiz;
 
-/**
- * Created by maria on 03/12/16.
- */
-
 public class Question {
 
     private int mTextResId;
@@ -18,15 +14,8 @@ public class Question {
         return mAnswerTrue;
     }
 
-    public void setAnswerTrue(boolean answerTrue) {
-        mAnswerTrue = answerTrue;
-    }
-
     public int getTextResId() {
         return mTextResId;
     }
 
-    public void setTextResId(int textResId) {
-        mTextResId = textResId;
-    }
 }
