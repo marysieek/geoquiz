@@ -23,7 +23,7 @@ public class CheatActivity extends AppCompatActivity {
         return i;
     }
 
-    public static boolean wasAnsWerShown(Intent result) {
+    public static boolean wasAnswerShown(Intent result) {
         return result.getBooleanExtra(EXTRA_ANSWER_SHOWN, false);
     }
 
