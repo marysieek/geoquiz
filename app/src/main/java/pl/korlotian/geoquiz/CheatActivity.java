@@ -18,7 +18,9 @@ public class CheatActivity extends AppCompatActivity {
     private static final String EXTRA_ANSWER_SHOWN = "pl.korlotian.geoquiz.answer_shown";
 
     private boolean mAnswerIsTrue;
+    private String mApiVersion;
     private TextView mAnswerTextView;
+    private TextView mApiVersionTextView;
     private Button mShowAnswer;
 
     public static Intent newIntent(Context packageContext, boolean answerIsTrue) {
@@ -38,6 +40,10 @@ public class CheatActivity extends AppCompatActivity {
 
         mAnswerIsTrue = getIntent().getBooleanExtra(EXTRA_ANSWER_IS_TRUE, false);
         mAnswerTextView = (TextView) findViewById(R.id.answer_text_view);
+
+        mApiVersion = Integer.toString(Build.VERSION.SDK_INT);
+        mApiVersionTextView = (TextView) findViewById(R.id.api_text_view);
+        mAnswerTextView.setText("API level " + mApiVersion);
 
         mShowAnswer = (Button) findViewById(R.id.show_answer_button);
         mShowAnswer.setOnClickListener(new View.OnClickListener() {
